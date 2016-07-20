@@ -26,7 +26,7 @@ export default class GridView extends Component {
             onClick: ::this.handleBack
           }}
       />}>
-        <Block><small>*每个网格的背景\边框\边距是演示需要增加的样式，不包含在Grid组件中</small></Block>
+        <Block><small>*每个网格的背景\\边框\\边距是演示需要增加的样式，不包含在Grid组件中</small></Block>
         <Block title='带间隔的网格'>
           <Row>
             <Col size={50} className='grid-example'>50</Col>

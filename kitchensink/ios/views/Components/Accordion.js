@@ -7,14 +7,14 @@ export default class AccordionView extends Component {
     router: PropTypes.object
   };
 
-  handleBack() {
+  handleBack () {
     this.context.router.push({
       pathname: '/',
       state: TransitionPages.getState()
     })
   }
 
-  render() {
+  render () {
     return (
       <Page
         fix
@@ -85,8 +85,7 @@ export default class AccordionView extends Component {
           </Accordion.Item>
         </Accordion>
 
-        <Accordion title='Custom Styled Accordion'>
-        </Accordion>
+        <Accordion title='Custom Styled Accordion' />
       </Page>
     )
   }
