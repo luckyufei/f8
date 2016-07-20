@@ -1,0 +1,195 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: #727272;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h2.title {
+  color: #3a7bd5;
+}
+
+.home {
+  position: relative;
+  overflow: hidden;
+  background: #00d2ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #00d2ff, #3a7bd5);
+  background: -o-linear-gradient(right, #00d2ff, #3a7bd5);
+  background: linear-gradient(to left, #00d2ff, #3a7bd5); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.home > .back {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3200px;
+  height: 2800px;
+  opacity: 0.025;
+  background-size: 100% 100%;
+  background-position: 1000px -1800px;
+  background-image: url('../images/back.svg')
+}
+
+.home .intro {
+  padding-left: 50px;
+  padding-top: 180px;
+  color: white;
+}
+
+.home .intro h2 {
+  font-weight: 400;
+}
+
+.home .logo {
+  width: 175px;
+  height: 68px;
+  position: relative;
+}
+
+.home .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.home .logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home .pure-button {
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 6px;
+  font-size: 120%;
+  margin-right: 15px;
+}
+
+.home .pure-button:hover {
+  background: white;
+  color: #00d2ff;
+  transition-duration: 0.2s;
+}
+
+
+.home .phone {
+  box-shadow: 0 0 80px rgba(0,0,0,0.2);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff;
+  height: 625px;
+  width: 355px;
+  border: none;
+  background: #eee;
+}
+
+.home .demo {
+  position: relative;
+}
+
+.home .tips {
+  position: absolute;
+  left: 355px;
+  top: 0;
+}
+
+.home .tips .tip {
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  padding: 15px 0;
+  margin-top: 10px;
+  width: 170px;
+  line-height: 20px;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.home .tips p {
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.install,
+.feature {
+  overflow: hidden;
+  padding: 10px 50px 20px 50px;
+}
+
+.install {
+  background-color: white;
+}
+
+.feature {
+  background-color: #efeff4;
+}
+
+.feature .pure-g {
+  justify-content: center;
+}
+
+.feature .img {
+  width: 80px;
+  margin: 10px auto;
+}
+
+.feature .text {
+  padding: 0 15px 20px 15px;
+}
+
+.feature .graph {
+  padding: 10px 15px;
+  font-size: 120%;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  color: black;
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  background-color: #ff9800;
+}
+
+.footer > .back {
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3200px;
+  height: 2800px;
+  opacity: 0.025;
+  background-size: 100% 100%;
+  background-position: 1800px 1800px;
+  background-image: url('../images/back.svg')
+}
+
+.footer .buttons {
+  padding: 10px 10px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1)
+}
+
+.footer p {
+  text-align: center;
+  color: white;
+  opacity: 0.5;
+}

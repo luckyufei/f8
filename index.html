@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>JMUI - React Mobile Functional UI Components</title>
+    <meta name="author" content="Jimmy Chou" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500|Ubuntu:700,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="css/site.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="description" content="React Mobile Functional UI Components"/>
+    <meta name="keywords" content="react,mobile,css,ui,components"/>
+</head>
+<body>
+  <div class="home">
+    <div class="back"></div>
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div class="intro">
+          <h1 class="logo">
+            <a href="/" title="JMUI">JMUI</a>
+            <img src="images/logo.svg" />
+          </h1>
+          <p>Themeable · Colorful · Functional · Smaller</p>
+          <h2>Mobile UI React Components</h2>
+          <div>
+            <a class="pure-button" href="/docs">Documentations</a>
+            <a class="pure-button" href="https://github.com/junewinds/jmui">View On Github</a>
+          </div>
+        </div>
+      </div>
+      <div class="pure-u-1-2">
+        <div class="demo">
+          <iframe src="kitchensink/ios/index.html" class="phone"></iframe>
+          <div class="tips">
+            <div class="tip">Live Demo</div>
+            <div class="tip">
+              <p>Try On Your Phone</p>
+              <img src="images/qrcode.png" width="91" height="91" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="install">
+    <h2 class="title">Easy To Use</h2>
+    <div style="margin-top:10px;background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+      <pre style="margin: 10px 0 -5px 0; line-height: 125%">
+<span style="color: #f8f8f2">npm install jmui</span>
+      </pre>
+    </div>
+    <div style="margin-top:10px;background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+      <pre style="margin: 10px 0 -5px 0; line-height: 125%">
+<span style="color: #66d9ef">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">`jmui/styles/jmui.ios.core.css`</span><span style="color: #f8f8f2">)</span>
+<span style="color: #66d9ef">require</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">`jmui/styles/jmui.ios.theme.</span><span style="color: #f92672">$</span><span style="color: #f8f8f2">{</span><span style="color: #f92672">color</span><span style="color: #f8f8f2">}.</span><span style="color: #e6db74">css`</span><span style="color: #f8f8f2">)</span>   <span style="color: #75715e">/* optional */</span>
+<span style="color: #66d9ef">import</span> <span style="color: #f8f8f2">{</span> <span style="color: #a6e22e">Button</span> <span style="color: #f8f8f2">}</span> <span style="color: #66d9ef">from</span> <span style="color: #e6db74">&#39;jmui&#39;</span>
+
+<span style="color: #66d9ef">export</span> <span style="color: #66d9ef">default</span> <span style="color: #a6e22e">HelloWorld</span> <span style="color: #66d9ef">extends</span> <span style="color: #a6e22e">React</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">Component</span> <span style="color: #f8f8f2">{</span>
+  <span style="color: #a6e22e">render</span> <span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span>
+    <span style="color: #66d9ef">return</span> <span style="color: #f92672">&lt;Button&gt;</span><span style="color: #a6e22e">Just do it!</span><span style="color: #f92672">&lt;/Button&gt;</span>
+  <span style="color: #f8f8f2">}</span>
+<span style="color: #f8f8f2">}</span>
+      </pre>
+    </div>
+  </div>
+  <div class="feature">
+    <h2 class="title">Core Features</h2>
+    <div class="pure-g">
+      <div class="pure-u-1-4">
+        <div class="img">
+          <img class="pure-img" src="images/reactjs.png" />
+        </div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="img">
+          <img class="pure-img" src="images/animation.png" />
+        </div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="img">
+          <img class="pure-img" src="images/theme.png" />
+        </div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="img">
+          <img class="pure-img" src="images/color.png" />
+        </div>
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-4">
+        <div class="graph">React</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="graph">Animation</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="graph">Theme</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="graph">Color</div>
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-4">
+        <div class="text">React components for building mobile user interface, supports ES6 and ES5</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="text">CSS3 animated elements and page switching, efficient use of GPU acceleration</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="text">Including ios and material style theme, suitable for both android and iPhone</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="text">Up to 10 different colors and two-shade layout presets to meet all types of application requirements</div>
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-4">
+        <div class="img">
+          <img class="pure-img" src="images/components.png" />
+        </div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="img">
+          <img class="pure-img" src="images/phone.png" />
+        </div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="img">
+          <img class="pure-img" src="images/support.png" />
+        </div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="img">
+          <img class="pure-img" src="images/open.svg" />
+        </div>
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-4">
+        <div class="graph">Component</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="graph">Performance</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="graph">Support</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="graph">Open Source</div>
+      </div>
+    </div>
+    <div class="pure-g">
+      <div class="pure-u-1-4">
+        <div class="text">Navbar, Toolbar, Tabbar, Button, Form, Preloader, Notification, Modal, ListView, CardView...</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="text">Specifically designed for mobile devices, smaller file size and faster loading speed</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="text">Problems encountered in use? Use Github issue or seek help from other users</div>
+      </div>
+      <div class="pure-u-1-4">
+        <div class="text">JMUI is completely free and open-source (MIT Licensed)</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="back"></div>
+    <div class="buttons">
+      <iframe src="https://ghbtns.com/github-btn.html?user=junewinds&repo=jmui&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=junewinds&repo=jmui&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+      <iframe src="https://ghbtns.com/github-btn.html?user=junewinds&repo=jmui&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+    </div>
+    <p>Copyright 2016 Junewinds</p>
+    <p>Styles from Framework7 under MIT License</p>
+    <p>Jimmy Chou &lt;zliangyu#gmail.com&gt;</p>
+  </div>
+</body>
+</html>
