@@ -3,6 +3,7 @@ var app = express()
 var path = require('path')
 
 app.use('/', express.static(path.resolve(__dirname, '../site')))
+app.use('/docs', express.static(path.resolve(__dirname, '../site/docs')))
 
 app.listen(3001, function (err) {
   if (err) {
