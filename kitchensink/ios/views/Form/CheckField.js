@@ -17,7 +17,7 @@ export default class CheckFieldView extends Component {
 
   handleBack () {
     this.context.router.push({
-      pathname: '/',
+      pathname: '/components/form',
       state: TransitionPages.getState()
     })
   }
