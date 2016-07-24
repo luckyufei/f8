@@ -3,12 +3,14 @@ import classNames from 'classnames'
 import ListGroup from './ListGroup'
 import ListItem from './ListItem'
 import ListDivider from './ListDivider'
+import ListButton from './ListButton'
 
 export default class List extends Component {
 
   static Divider = ListDivider;
   static Item = ListItem;
   static Group = ListGroup;
+  static Button = ListButton;
 
   static propTypes = {
     children: PropTypes.node,

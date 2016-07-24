@@ -14,7 +14,7 @@ export default function getRoutes() {
         <Route path='page' component={require('./views/Components/Page').default} />
         <Route path='block' component={require('./views/Components/Block').default} />
         <Route path='grid' component={require('./views/Components/Grid').default} />
-        <Route path='button' component={require('./views/Components/Button').default} />
+        <Route path='button' component={require('./views/Form/Button').default} />
         <Route path='form' component={require('./views/Form/Form').default} />
         <Route path="formelems" component={require('./views/Form/FormElems').default} />
         <Route path='picker' component={require('./views/Form/Picker').default} />
