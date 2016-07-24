@@ -18,19 +18,20 @@ export default class CheckField extends Component {
     check: false
   };
 
-  handleChange (e) {
+  handleChange(e) {
     const { onChange } = this.props
     if (onChange) {
       onChange(e)
     }
   }
 
-  render () {
+  render() {
     const { name, value, title, after, text, subTitle, check, ...props } = this.props
     return (
       <li>
         <label className='label-checkbox item-content'>
-          <input type='checkbox' {...props} name={name} value={value} checked={!!check} onChange={::this.handleChange} />
+          <input
+            type='checkbox' {...props} name={name} value={value} checked={!!check} onChange={this.handleChange.bind(this) } />
           <div className='item-media'>
             <Icon name='form-checkbox' />
           </div>
