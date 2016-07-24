@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react'
-import {Page, List, Navbar, Block} from 'jmui'
+import {Page, TransitionPages, List, Navbar, Block} from 'jmui'
 
 export default class Form extends Component {
 
@@ -13,11 +13,25 @@ export default class Form extends Component {
     this.context.router.push(pathname)
   }
 
+  handleBack() {
+    this.context.router.push({
+      pathname: '/',
+      state: TransitionPages.getState()
+    })
+  }
+
   render() {
     return (
       <Page
         fix
-        navbar={<Navbar title="Forms"/>}
+        navbar={<Navbar
+          title='Form'
+          left={{
+            iconName: 'back',
+            text: '返回',
+            onClick: this.handleBack.bind(this)
+          }}
+          />}
         >
         <Block>
           Framework7 provides very flexible forms layout, you can use it with/out icons, with/out labels, or mixed layouts.

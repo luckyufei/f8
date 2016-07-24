@@ -5,7 +5,7 @@ export default class TextField extends Component {
   static propTypes = {
     label: PropTypes.string,
     icon: PropTypes.node,
-    type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'url', 'date', 'number', 'datatime-local']),
+    type: PropTypes.oneOf(['text', 'password', 'email', 'tel', 'url', 'date', 'number', 'datetime-local']),
     placeholder: PropTypes.string
   };
 
