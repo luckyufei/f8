@@ -9,7 +9,7 @@ export default class TabbarView extends Component {
 
   handleBack () {
     this.context.router.push({
-      pathname: '/',
+      pathname: '/components/navbar-toolbar',
       state: TransitionPages.getState()
     })
   }

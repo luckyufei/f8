@@ -14,6 +14,7 @@ export default class Index extends Component {
   }
 
   render() {
+    const todo = <Badge theme='green'>Todo</Badge>;
     return (
       <Page
         fix
@@ -22,7 +23,6 @@ export default class Index extends Component {
         <Button href="#">About Framework8</Button>
         <Block title='Framework8 Kitchen Sink' />
         <List title='Framework7 Kitchen Sink'>
-          <List.Group>
             <List.Item
               icon={<span className='iconfont icon-folding' />}
               title='Accordion'
@@ -31,13 +31,13 @@ export default class Index extends Component {
             <List.Item
               icon={<span className='iconfont icon-folding' />}
               title='Autocomplete'
-              after={<Badge theme='green'>Todo</Badge>}
+              after={todo}
               onClick={this.handleJump.bind(this, '/components/accordion') }
               />
             <List.Item
               icon={<span className='iconfont icon-folding' />}
               title='Calendar/Datepicker'
-              after={<Badge theme='green'>Todo</Badge>}
+              after={todo}
               onClick={this.handleJump.bind(this, '/components/accordion') }
               />
             <List.Item
@@ -48,15 +48,183 @@ export default class Index extends Component {
             <List.Item
               icon={<span className='iconfont icon-folding' />}
               title='Contacts List'
-              after={<Badge theme='green'>Todo</Badge>}
+              after={todo}
               onClick={this.handleJump.bind(this, '/components/accordion') }
               />
             <List.Item
               icon={<span className='iconfont icon-biaodan' />}
               title='Forms'
-              after='Forms'
+              after={todo}
               onClick={this.handleJump.bind(this, '/components/form') }
               />
+            <List.Item
+              icon={<span className='iconfont icon-wanggetu' />}
+              title='Grid'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/grid') }
+              />
+            <List.Item
+              icon={<span className='iconfont icon-wanggetu' />}
+              title='Infinite Scroll'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/infinite-scroll') }
+              />
+            <List.Item
+              icon={<span className='iconfont icon-wanggetu' />}
+              title='Lazy Load Images'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/laze-load') }
+              />
+           <List.Item
+              icon={<span className='iconfont icon-list' />}
+              title='ListView'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/list') }
+              />
+            <List.Item
+              icon={<span className='iconfont icon-list' />}
+              title='Login Screen'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/login-screen') }
+              />
+            <List.Item
+              icon={<span className='iconfont icon-iconfonttupian' />}
+              title='MediaList'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/medialist') }
+              /> 
+            <List.Item
+              icon={<span className='iconfont icon-iconfonttupian' />}
+              title='Message'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/message') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-iconfonttupian' />}
+              title='Modal'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/modal') }
+              />    
+             <List.Item
+              icon={<span className='iconfont icon-daohang' />}
+              title='NavBars and ToolBars'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/navbar-toolbar') }
+              />
+            <List.Item
+              icon={<span className='iconfont icon-tongzhi' />}
+              title='Notifications'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/notification') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-tongzhi' />}
+              title='Photo Browser'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/photo-browser') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-tongzhi' />}
+              title='Picker'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/picker') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-tongzhi' />}
+              title='Popover'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/popover') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Preloader'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/preloader') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Progress Bar'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/progressbar') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Pull To Refresh'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/pull-to-refresh') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Search Bar'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/searchbar') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Side Panels'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/side-panels') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Sortable List'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/sortable-list') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Swipe To Delete'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/swipe-to-delete') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Swiper Slider'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/swiper-slider') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Tabs'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/tabs') }
+              />  
+            <List.Item
+              icon={<span className='iconfont icon-loader' />}
+              title='Virtual List'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/virtual-list') }
+              />  
+        </List>
+        <List>
+         <List.Item
+              icon={<span className='iconfont icon-fenleizukuaier' />}
+              title='Color Themes'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/color-themes') }
+              />
+            <List.Item
+              icon={<span className='iconfont icon-folding' />}
+              title='Dynamically Generated Content'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/dynamical-content') }
+              />
+        </List>
+        <List>
+          <List.Item
+              icon={<span className='iconfont icon-fenleizukuaier' />}
+              title='Transitions And Effects'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/transitions') }
+              />
+          <List.Item
+              icon={<span className='iconfont icon-fenleizukuaier' />}
+              title='Core Features'
+              after={todo}
+              onClick={this.handleJump.bind(this, '/components/core-features') }
+              />
+        </List>
+        <List>
             <List.Item
               icon={<span className='iconfont icon-biaoqian' />}
               title='图标'
@@ -75,84 +243,6 @@ export default class Index extends Component {
               after='Badge'
               onClick={this.handleJump.bind(this, '/components/badge') }
               />
-          </List.Group>
-        </List>
-        <List>
-          <List.Group title='导航'>
-            <List.Item
-              icon={<span className='iconfont icon-daohang' />}
-              title='导航条'
-              after='Navbar'
-              onClick={this.handleJump.bind(this, '/components/navbar') }
-              />
-            <List.Item
-              icon={<span className='iconfont icon-tab' />}
-              title='标签栏'
-              after='Tabbar'
-              onClick={this.handleJump.bind(this, '/components/tabbar') }
-              />
-            <List.Item
-              icon={<span className='iconfont icon-dibutiao' />}
-              title='工具栏'
-              after='Toolbar'
-              onClick={this.handleJump.bind(this, '/components/toolbar') }
-              />
-          </List.Group>
-          <List.Group title='列表'>
-            <List.Item
-              icon={<span className='iconfont icon-list' />}
-              title='表格列表'
-              after='List'
-              onClick={this.handleJump.bind(this, '/components/list') }
-              />
-            <List.Item
-              icon={<span className='iconfont icon-iconfonttupian' />}
-              title='媒体列表'
-              after='MediaList'
-              onClick={this.handleJump.bind(this, '/components/medialist') }
-              />
-            <List.Item
-              icon={<span className='iconfont icon-card' />}
-              title='卡片列表'
-              after='Card'
-              onClick={this.handleJump.bind(this, '/components/card') }
-              />
-          </List.Group>
-          <List.Group title='交互'>
-            <List.Item
-              icon={<span className='iconfont icon-tongzhi' />}
-              title='通知'
-              after='Notification'
-              onClick={this.handleJump.bind(this, '/components/notification') }
-              />
-            <List.Item
-              icon={<span className='iconfont icon-loader' />}
-              title='指示器'
-              after='Preloader'
-              onClick={this.handleJump.bind(this, '/components/preloader') }
-              />
-          </List.Group>
-          <List.Group title='容器'>
-            <List.Item
-              icon={<span className='iconfont icon-fenleizukuaier' />}
-              title='区块'
-              after='Block'
-              onClick={this.handleJump.bind(this, '/components/block') }
-              />
-            <List.Item
-              icon={<span className='iconfont icon-wanggetu' />}
-              title='网格'
-              after='Grid'
-              onClick={this.handleJump.bind(this, '/components/grid') }
-              />
-            <List.Item
-              icon={<span className='iconfont icon-folding' />}
-              title='折叠面板'
-              after='Accordion'
-              onClick={this.handleJump.bind(this, '/components/accordion') }
-              />
-          </List.Group>
-          <List.Group title='布局'>
             <List.Item
               icon={<span className='iconfont icon-shouji' />}
               title='视图'
@@ -177,7 +267,6 @@ export default class Index extends Component {
               after='Page'
               onClick={this.handleJump.bind(this, '/components/page') }
               />
-          </List.Group>
         </List>
       </Page>
     )

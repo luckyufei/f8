@@ -14,6 +14,7 @@ export default function getRoutes() {
         <Route path='page' component={require('./views/Components/Page').default} />
         <Route path='block' component={require('./views/Components/Block').default} />
         <Route path='grid' component={require('./views/Components/Grid').default} />
+
         <Route path='button' component={require('./views/Form/Button').default} />
         <Route path='form' component={require('./views/Form/Form').default} />
         <Route path="formelems" component={require('./views/Form/FormElems').default} />
@@ -21,9 +22,12 @@ export default function getRoutes() {
         <Route path='radiofield' component={require('./views/Form/RadioField').default} />
         <Route path='checkfield' component={require('./views/Form/CheckField').default} />
         <Route path='numberfield' component={require('./views/Form/NumberField').default} />
-        <Route path='navbar' component={require('./views/Components/Navbar').default} />
-        <Route path='toolbar' component={require('./views/Components/Toolbar').default} />
-        <Route path='tabbar' component={require('./views/Components/Tabbar').default} />
+        
+        <Route path='navbar-toolbar' component={require('./views/Navigator/index').default} />
+        <Route path='navbar' component={require('./views/Navigator/Navbar').default} />
+        <Route path='toolbar' component={require('./views/Navigator/Toolbar').default} />
+        <Route path='tabbar' component={require('./views/Navigator/Tabbar').default} />
+
         <Route path='list' component={require('./views/Components/List').default} />
         <Route path='medialist' component={require('./views/Components/MediaList').default} />
         <Route path='card' component={require('./views/Components/Card').default} />
