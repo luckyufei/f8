@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import {
   Page, TransitionPages, Navbar, List,
-  Form, TextField, SelectField
+  Form, TextField, SelectField, SwitchField,
+  Slider, TextArea,
 } from 'jmui'
 
 export default class FormView extends Component {
@@ -78,59 +79,112 @@ export default class FormView extends Component {
             type='datetime-local'
             placeholder="Birth day"
             />
+          <SwitchField
+            icon={<span className='iconfont icon-riqi'></span>}
+            label='Switch'
+            onChange={e => console.log("Switch onChange value: ", e.target.checked)}
+            /> 
+          <Slider
+            icon={<span className='iconfont icon-riqi'></span>}
+            label="Slider"
+            min={1}
+            max={100}
+            step={0.1}
+            />  
+          <TextArea
+            icon={<span className='iconfont icon-riqi'></span>}
+            label="TextArea" 
+            placeholder="something input"
+            />
+          <TextArea
+            icon={<span className='iconfont icon-riqi'></span>}
+            label="TextArea" 
+            placeholder="something textarea"
+            resizable
+            />              
         </Form>
-        <Form title='不带标签的表单'>
+        <Form title='Icons and inputs'>
           <TextField
             icon={<span className='iconfont icon-yonghu'></span>}
-            placeholder='请输入用户名'
+            placeholder='Your name'
             />
           <TextField
             icon={<span className='iconfont icon-mima'></span>}
-            type='password'
-            placeholder='请输入登录密码'
+            type='email'
+            placeholder='E-mail'
+            />
+          <SelectField
+            icon={<span className='iconfont icon-riqi'></span>}
+            options={['Male', 'Female']}
             />
           <TextField
             icon={<span className='iconfont icon-riqi'></span>}
             type='date'
+            placeholder="Birth day"
+            /> 
+           <SwitchField
+            icon={<span className='iconfont icon-riqi'></span>}
+            onChange={e => console.log("Switch onChange value: ", e.target.checked)}
+            />    
+        </Form>
+        <Form title='Labels and inputs'>
+          <TextField
+            label='Name'
+            placeholder="You name"
+            />
+          <TextField
+            label='E-mail'
+            type='email'
+            placeholder="E-mail"
+            />
+           <SelectField
+            label="Gender"
+            options={['Male', 'Female']}
+            />  
+          <TextField
+            label='Birth date'
+            type='date'
+            placeholder="Birth day"
+            />
+           <SwitchField
+            label="Switch"
+            onChange={e => console.log("Switch onChange value: ", e.target.checked)}
+            />   
+        </Form>
+        <Form title='Just inputs'>
+          <TextField
+            placeholder='Your name'
+            />
+          <TextField
+            type='email'
+            placeholder='E-mail'
+            />
+           <SelectField
+            options={['Male', 'Female']}
+            />   
+          <TextField
+            type='date'
+            placeholder='Birth day'
             />
         </Form>
-        <Form title='只有标签的表单'>
+        <Form inset title='Inset, just inputs'>
           <TextField
-            label='用户名'
+            placeholder='Your name'
+            inset
             />
           <TextField
-            label='密码'
-            type='password'
+            type='email'
+            placeholder='E-mail'
+            inset
             />
-          <TextField
-            label='出生日期'
-            type='date'
-            />
-        </Form>
-        <Form title='只有输入框的表单'>
-          <TextField
-            placeholder='请输入用户名'
-            />
-          <TextField
-            type='password'
-            placeholder='请输入登录密码'
-            />
+           <SelectField
+            options={['Male', 'Female']}
+            inset 
+            />   
           <TextField
             type='date'
-            placeholder='请输入出生日期'
-            />
-        </Form>
-        <Form inset title='缩进的只有输入框的表单'>
-          <TextField
-            placeholder='请输入用户名'
-            />
-          <TextField
-            type='password'
-            placeholder='请输入登录密码'
-            />
-          <TextField
-            type='date'
-            placeholder='请输入出生日期'
+            placeholder='Birth day'
+            inset
             />
         </Form>
       </Page>

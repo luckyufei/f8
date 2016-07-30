@@ -28,7 +28,7 @@ export default class Form extends Component {
           title='Form'
           left={{
             iconName: 'back',
-            text: '返回',
+            text: 'Back',
             onClick: this.handleBack.bind(this)
           }}
           />}

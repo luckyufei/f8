@@ -9,7 +9,7 @@ Mobile UI React Components
 Live Demo
 ---------
 
-https://junewinds.github.io/jmui
+https://allanfish.github.io/f8 
 
 Features
 --------
