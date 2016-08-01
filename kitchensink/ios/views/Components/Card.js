@@ -1,4 +1,4 @@
-import { Page, TransitionPages, Navbar, Card, Block, Image, ImageBackground, List, Badge } from 'jmui'
+import { Page, TransitionPages, Navbar, Toolbar, Card, Block, Image, ImageBackground, List, Badge } from 'jmui'
 import React, { Component, PropTypes } from 'react'
 
 export default class CardView extends Component {
@@ -19,7 +19,7 @@ export default class CardView extends Component {
   render() {
     return (
       <Page
-        fix
+        fixNavbar
         navbar={<Navbar
           title='Cards'
           left={{
@@ -27,7 +27,14 @@ export default class CardView extends Component {
             text: 'Back',
             onClick: ::this.handleBack
           }}
-          />}>
+          />}
+        fixToolbar
+        toolbar={
+          <Toolbar>
+            <Toolbar.Item href='#' className='link'>Dummy Link</Toolbar.Item>
+            <Toolbar.Item href='#' className='open-popover link'>Menu</Toolbar.Item>
+          </Toolbar>
+        }>
         <Block>Cards, along with List View, is a one more great way to contain and orginize your information.Cards contains unique related data, for example, a photo, text, and link all about a single subject.Cards are typically an entry point to more complex and detailed information.</Block>
 
         <Block title='Simple Cards' />
@@ -90,30 +97,64 @@ export default class CardView extends Component {
           </Card.Footer>
         </Card>
 
-        <Block title='卡片中嵌入表格列表' />
+        <Block title='Cards With List View' />
         <Card>
           <Card.Content cover>
             <List>
               <List.Item
                 icon={<span className='iconfont icon-anniu' />}
-                title='按钮'
-                after='Button'
+                title='Link 1'
                 onClick={:: this.handleClick}
               />
               <List.Item
                 icon={<span className='iconfont icon-tongzhi' />}
-                title='通知'
-                after={<Badge theme='green'>2</Badge>}
+                title='Link 2'
                 onClick={:: this.handleClick}
               />
               <List.Item
                 icon={<span className='iconfont icon-wenjian' />}
-                title='文件'
-                after='新建文件'
+                title='Link 3'
+                onClick={:: this.handleClick}
+              />
+              <List.Item
+                icon={<span className='iconfont icon-wenjian' />}
+                title='Link 4'
+                onClick={:: this.handleClick}
+              />
+              <List.Item
+                icon={<span className='iconfont icon-wenjian' />}
+                title='Link 5'
                 onClick={:: this.handleClick}
               />
             </List>
           </Card.Content>
+        </Card>
+
+        <Card>
+          <Card.Header>New Releases:</Card.Header>
+          <Card.Content>
+            <List>
+              <List.Item
+                icon={<Image src='http://lorempixel.com/88/88/fashion/4' responsive={false} width='44' height='44' />}
+                title='Yellow Submarine'
+                subTitle='Beatles'
+              />
+              <List.Item
+                icon={<Image src='http://lorempixel.com/88/88/fashion/5' responsive={false} width='44' height='44' />}
+                title={'Don\'t Stop Me Now'}
+                subTitle='Queen'
+              />
+              <List.Item
+                icon={<Image src='http://lorempixel.com/88/88/fashion/6' responsive={false} width='44' height='44' />}
+                title='Billie Jean'
+                subTitle='Michael Jackson'
+              />
+            </List>
+          </Card.Content>
+          <Card.Footer>
+            <span>January 20, 2015</span>
+            <span>5 comments</span>
+          </Card.Footer>
         </Card>
       </Page>
     )

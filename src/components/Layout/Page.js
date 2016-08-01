@@ -5,7 +5,9 @@ import { getThemes } from '../../utils/theme'
 export default class Page extends Component {
 
   static propTypes = {
-    fix: PropTypes.bool,
+    fixNavbar: PropTypes.bool,
+    fixToolbar: PropTypes.bool,
+    fixTabbar: PropTypes.bool,
     children: PropTypes.node,
     className: PropTypes.string,
     navbar: PropTypes.node,
@@ -29,25 +31,25 @@ export default class Page extends Component {
   }
 
   render () {
-    const { children, fix, className, navbar, toolbar, theme, ...props } = this.props
+    const { children, fixNavbar, fixTabbar, fixToolbar, className, navbar, toolbar, theme, ...props } = this.props
     const { tabbar } = this.state
     const classes = classNames({
       'page': true,
-      'navbar-fixed': fix && navbar,
-      'toolbar-fixed': fix && toolbar || tabbar !== 'none',
+      'navbar-fixed': fixNavbar && navbar,
+      'toolbar-fixed': fixToolbar && toolbar || tabbar !== 'none',
       'no-navbar': !navbar,
-      'tabbar-labels-fixed': fix && tabbar === 'label',
+      'tabbar-labels-fixed': fixTabbar && tabbar === 'label',
       [`theme-${theme}`]: theme
     }, className)
     return (
       <div className={classes} {...props}>
-        {fix && navbar}
+        {fixNavbar && navbar}
         <div className='page-content'>
-          {!fix && navbar}
+          {!fixNavbar && navbar}
           {children}
-          {!fix && toolbar}
+          {!fixToolbar && toolbar}
         </div>
-        {fix && toolbar}
+        {fixToolbar && toolbar}
       </div>
     )
   }

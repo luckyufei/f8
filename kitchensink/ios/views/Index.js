@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { Page, Navbar, List, Block, Button, Badge } from 'jmui'
+import { Page, Navbar, List, Block, Button, Badge, Toolbar } from 'jmui'
 
 export default class Index extends Component {
 
@@ -17,10 +17,17 @@ export default class Index extends Component {
     const todo = <Badge theme='green'>Todo</Badge>;
     return (
       <Page
-        fix
-        navbar={<Navbar title='Framework8' />}>
+        fixNavbar
+        navbar={<Navbar title='Framework8' />}
+        fixToolbar
+        toolbar={
+          <Toolbar>
+            <Toolbar.Item href='#' className='link'>Dummy Link</Toolbar.Item>
+            <Toolbar.Item href='#' className='open-popover link'>Menu</Toolbar.Item>
+          </Toolbar>
+        }>
         <Block title='Welcome To Framework8' />
-        <Button href="#">About Framework8</Button>
+        <Block><Button href="#">About Framework8</Button></Block>
         <Block title='Framework8 Kitchen Sink' />
         <List title='Framework7 Kitchen Sink'>
             <List.Item
