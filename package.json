@@ -41,6 +41,7 @@
     "test:watch": "karma start build/karma.conf.js",
     "codecov": "cat coverage/lcov/lcov.info | codecov",
     "kitchensink:ios": "better-npm-run kitchensink:ios",
+    "ios:dev": "better-npm-run kitchensink:ios:dev",
     "kitchensink:ios:dev": "better-npm-run kitchensink:ios:dev",
     "preversion": "npm run clean",
     "version": "npm run build",
