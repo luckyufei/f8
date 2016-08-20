@@ -55,7 +55,7 @@ export default class Navbar extends Component {
       'icon-only': !text
     })
     return (
-      <a key={key} className={classesLink} {...others}>
+      <a href='javascript:;' key={key} className={classesLink} {...others}>
         {iconName && <Icon name={iconName} />}
         {icon}
         {text}
