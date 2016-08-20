@@ -19,15 +19,15 @@ export default class GridView extends Component {
       <Page
         fix
         navbar={<Navbar
-          title='网格'
+          title='Grid'
           left={{
             iconName: 'back',
-            text: '返回',
+            text: 'Back',
             onClick: ::this.handleBack
           }}
       />}>
-        <Block><small>*每个网格的背景\\边框\\边距是演示需要增加的样式，不包含在Grid组件中</small></Block>
-        <Block title='带间隔的网格'>
+        <Block><small>Framework8 comes with flexible layout grid:</small></Block>
+        <Block title='COLUMNS WITH GUTTER'>
           <Row>
             <Col size={50} className='grid-example'>50</Col>
             <Col size={50} className='grid-example'>50</Col>
@@ -72,7 +72,7 @@ export default class GridView extends Component {
             <Col size={60} className='grid-example'>60</Col>
           </Row>
         </Block>
-        <Block title='不带间隔的网格'>
+        <Block title='NO GUTTER BETWEEN COLUMNS'>
           <Row gutter={false}>
             <Col size={50} className='grid-example'>50</Col>
             <Col size={50} className='grid-example'>50</Col>
@@ -117,7 +117,7 @@ export default class GridView extends Component {
             <Col size={60} className='grid-example'>60</Col>
           </Row>
         </Block>
-        <Block title='嵌套网格'>
+        <Block title='NESTED'>
           <Row>
             <Col size={50} className='grid-example'>
               <p>50</p>
@@ -135,7 +135,7 @@ export default class GridView extends Component {
             </Col>
           </Row>
         </Block>
-        <Block title='响应式网格'>
+        <Block title='RESPONSIVE GRID'>
           <Row>
             <Col size={100} tabletSize={50} className='grid-example'>phone-100 tablet-50</Col>
             <Col size={100} tabletSize={50} className='grid-example'>phone-100 tablet-50</Col>

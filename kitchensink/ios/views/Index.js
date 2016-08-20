@@ -67,7 +67,6 @@ export default class Index extends Component {
             <List.Item
               icon={<span className='iconfont icon-wanggetu' />}
               title='Grid'
-              after={todo}
               onClick={this.handleJump.bind(this, '/components/grid') }
               />
             <List.Item
