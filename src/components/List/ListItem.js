@@ -45,7 +45,7 @@ export default class ListItem extends Component {
     return (
       <li className={className}>
         {onClick && typeof onClick === 'function' &&
-          <a onClick={::this.handleClick} className='item-link item-content'>
+          <a onClick={this.handleClick.bind(this)} className='item-link item-content'>
             {this.renderIcon()}
             <ItemInner {...{title, after, subTitle, text}}/>
           </a>
@@ -53,13 +53,13 @@ export default class ListItem extends Component {
         {href &&
           <a href={href} className='item-link item-content'>
             {this.renderIcon()}
-            {this.renderInner()}
+            <ItemInner {...{title, after, subTitle, text}}/>
           </a>
         }
         {!onClick && !href &&
           <div className='item-content'>
             {this.renderIcon()}
-            {this.renderInner()}
+            <ItemInner {...{title, after, subTitle, text}}/>
           </div>
         }
       </li>
