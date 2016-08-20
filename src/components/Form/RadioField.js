@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import ItemInner from '../Common/ItemInner'
 
 export default class RadioField extends Component {
 
@@ -34,30 +35,7 @@ export default class RadioField extends Component {
           {icon &&
             <div className='item-media'>{icon}</div>
           }
-          <div className='item-inner'>
-            {(subTitle || text) &&
-              <div className='item-title-row'>
-                {title &&
-                  <div className='item-title'>{title}</div>
-                }
-                {after &&
-                  <div className='item-after'>{after}</div>
-                }
-              </div>
-            }
-            {!subTitle && !text && title &&
-              <div className='item-title'>{title}</div>
-            }
-            {!subTitle && !text && after &&
-              <div className='item-after'>{after}</div>
-            }
-            {subTitle &&
-              <div className='item-subtitle'>{subTitle}</div>
-            }
-            {text &&
-              <div className='item-text'>{text}</div>
-            }
-          </div>
+          <ItemInner {...{title, after, text, subTitle}}/>
         </label>
       </li>
     )

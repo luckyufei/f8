@@ -45,15 +45,8 @@ export default class Form extends Component {
               />
             <List.Item
               icon={<span className='iconfont icon-danxuan' />}
-              title='Radios'
-              after='Radios'
-              onClick={this.handleJump.bind(this, '/components/radiofield') }
-              />
-            <List.Item
-              icon={<span className='iconfont icon-duoxuan12px' />}
-              title='Checkboxes'
-              after='Checkboxes'
-              onClick={this.handleJump.bind(this, '/components/checkfield') }
+              title='Checkboxes and Radios'
+              onClick={this.handleJump.bind(this, '/components/checkbox-radio') }
               />
             <List.Item
               icon={<span className='iconfont icon-anniu' />}

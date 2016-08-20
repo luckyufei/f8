@@ -1,8 +1,9 @@
-import Timer from '../../utils/Timer'
-import { whichTransitionEvent } from '../../utils/transition'
 import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import classNames from 'classnames'
+import ItemInner from '../Common/ItemInner'
+import Timer from '../../utils/Timer'
+import { whichTransitionEvent } from '../../utils/transition'
 
 export default class Item extends Component {
 
@@ -102,7 +103,7 @@ export default class Item extends Component {
   }
 
   render () {
-    const { notification } = this.props
+    const { notification: {icon, title, subTitle, message} } = this.props
     const { visible } = this.state
     const classes = classNames({
       'notification-item': true,
@@ -114,24 +115,16 @@ export default class Item extends Component {
           {notification.icon &&
             <div className='item-media'>{notification.icon}</div>
           }
-          <div className='item-inner'>
-            <div className='item-title-row'>
-              {notification.title &&
-                <div className='item-title'>{notification.title}</div>
-              }
-              <div className='item-after'>
-                <a onClick={::this.dismiss} className='close-notification'>
+          <ItemInner
+            title={title}
+            after={(
+              <a onClick={::this.dismiss} className='close-notification'>
                   <span></span>
-                </a>
-              </div>
-            </div>
-            {notification.subTitle &&
-              <div className='item-subtitle'>{notification.subTitle}</div>
-            }
-            {notification.message &&
-              <div className='item-text'>{notification.message}</div>
-            }
-          </div>
+              </a>
+                )}
+            subTitle={subTitle}    
+            text={message}
+            />
         </div>
       </li>
     )

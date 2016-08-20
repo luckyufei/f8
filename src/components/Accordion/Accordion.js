@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import AccordionItem from './AccordionItem'
 import classNames from 'classnames'
 
-export default class Accordion extends Component {
+export default class Accordion  extends Component {
   static Item = AccordionItem;
 
   static propTypes = {
