@@ -17,8 +17,13 @@ export default class List extends Component {
     className: PropTypes.string,
     label: PropTypes.node,
     inset: PropTypes.bool,
-    tabletInset: PropTypes.bool
+    tabletInset: PropTypes.bool,
+    block: PropTypes.bool,
   };
+
+  static defaultProps = {
+    block: true
+  }
 
   componentWillMount () {
     const { children } = this.props
@@ -52,10 +57,10 @@ export default class List extends Component {
   }
 
   render () {
-    const { children, className, inset, tabletInset, label } = this.props
+    const { children, block, className, inset, tabletInset, label } = this.props
     const { media, group } = this.state
     const classes = classNames({
-      'list-block': true,
+      'list-block': !!block,
       'media-list': media,
       'inset': !!inset,
       'tablet-inset': !!tabletInset
