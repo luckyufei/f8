@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Icon from '../Icon/Icon'
+import ItemInner from '../Common/ItemInner'
 
 export default class ListItem extends Component {
 
@@ -39,44 +40,14 @@ export default class ListItem extends Component {
     }
   }
 
-  renderInner () {
-    const { subTitle, text, title, after } = this.props
-    return (
-      <div className='item-inner'>
-        {(subTitle || text) &&
-          <div className='item-title-row'>
-            {title &&
-              <div className='item-title'>{title}</div>
-            }
-            {after &&
-              <div className='item-after'>{after}</div>
-            }
-          </div>
-        }
-        {!subTitle && !text && title &&
-          <div className='item-title'>{title}</div>
-        }
-        {!subTitle && !text && after &&
-          <div className='item-after'>{after}</div>
-        }
-        {subTitle &&
-          <div className='item-subtitle'>{subTitle}</div>
-        }
-        {text &&
-          <div className='item-text'>{text}</div>
-        }
-      </div>
-    )
-  }
-
   render () {
-    const { onClick, href, className } = this.props
+    const { onClick, href, className, subTitle, text, title, after } = this.props
     return (
       <li className={className}>
         {onClick && typeof onClick === 'function' &&
           <a onClick={::this.handleClick} className='item-link item-content'>
             {this.renderIcon()}
-            {this.renderInner()}
+            <ItemInner {...{title, after, subTitle, text}}/>
           </a>
         }
         {href &&

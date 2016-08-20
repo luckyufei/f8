@@ -15,10 +15,10 @@ export default class Image extends Component {
   };
 
   render () {
-    const { responsive, className, ...props } = this.props
+    const { responsive, className, width, ...props } = this.props
     const classes = classNames({
-      'img-responsive': !!responsive
+      'img-responsive': !width  && !!responsive
     }, className)
-    return (<img {...props} className={classes} />)
+    return (<img width={width} {...props} className={classes} />)
   }
 }

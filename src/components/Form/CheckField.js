@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import ItemInner from '../Common/ItemInner'
 import Icon from '../Icon/Icon'
 
 export default class CheckField extends Component {
@@ -11,6 +12,7 @@ export default class CheckField extends Component {
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     name: PropTypes.string,
     check: PropTypes.bool,
+    media: PropTypes.node, 
     onChange: PropTypes.func
   };
 
@@ -26,39 +28,16 @@ export default class CheckField extends Component {
   }
 
   render() {
-    const { name, value, title, after, text, subTitle, check, ...props } = this.props
+    const { name, value, title, after, text, media, subTitle, check, ...props } = this.props
     return (
       <li>
         <label className='label-checkbox item-content'>
           <input
             type='checkbox' {...props} name={name} value={value} checked={!!check} onChange={this.handleChange.bind(this) } />
           <div className='item-media'>
-            <Icon name='form-checkbox' />
+          { media ? media : <Icon name='form-checkbox' />}
           </div>
-          <div className='item-inner'>
-            {(subTitle || text) &&
-              <div className='item-title-row'>
-                {title &&
-                  <div className='item-title'>{title}</div>
-                }
-                {after &&
-                  <div className='item-after'>{after}</div>
-                }
-              </div>
-            }
-            {!subTitle && !text && title &&
-              <div className='item-title'>{title}</div>
-            }
-            {!subTitle && !text && after &&
-              <div className='item-after'>{after}</div>
-            }
-            {subTitle &&
-              <div className='item-subtitle'>{subTitle}</div>
-            }
-            {text &&
-              <div className='item-text'>{text}</div>
-            }
-          </div>
+          <ItemInner {...{title, after, subTitle, text}}/>
         </label>
       </li>
     )

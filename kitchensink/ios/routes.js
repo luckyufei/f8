@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
-export default function getRoutes() {
+export default function getRoutes () {
   return (
     <Route path='/' component={require('./views/Framework').default}>
       <IndexRoute component={require('./views/Index').default} />
@@ -19,8 +19,7 @@ export default function getRoutes() {
         <Route path='form' component={require('./views/Form/Form').default} />
         <Route path="formelems" component={require('./views/Form/FormElems').default} />
         <Route path='picker' component={require('./views/Form/Picker').default} />
-        <Route path='radiofield' component={require('./views/Form/RadioField').default} />
-        <Route path='checkfield' component={require('./views/Form/CheckField').default} />
+        <Route path='checkbox-radio' component={require('./views/Form/CheckRadioField').default} />
         <Route path='numberfield' component={require('./views/Form/NumberField').default} />
         
         <Route path='navbar-toolbar' component={require('./views/Navigator/index').default} />
