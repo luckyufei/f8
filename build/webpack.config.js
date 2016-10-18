@@ -29,7 +29,7 @@ module.exports = {
   },
   entry: {
     'jmui': path.resolve(__dirname, '../src/index.js'),
-    'jmui.ios.core': path.resolve(__dirname, '../src/styles/ios/jmui.less'),
+    'jmui.ios.core': path.resolve(__dirname, '../src/styles/ios/f8.less'),
     'jmui.ios.layout.dark': path.resolve(__dirname, '../src/styles/ios/layout/dark.less'),
     'jmui.ios.layout.white': path.resolve(__dirname, '../src/styles/ios/layout/white.less'),
     'jmui.ios.theme.gray': path.resolve(__dirname, '../src/styles/ios/theme/gray.less'),

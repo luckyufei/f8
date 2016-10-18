@@ -1,0 +1,6 @@
+[submodule "sui-mobile"]
+	path = sui-mobile
+	url = https://github.com/sdc-alibaba/SUI-Mobile.git
+[submodule "f7"]
+	path = f7
+	url = https://github.com/nolimits4web/Framework7.git

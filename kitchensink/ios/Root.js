@@ -1,4 +1,4 @@
-require('jmui/styles/ios/jmui.less')
+require('jmui/styles/ios/f8.less')
 require('jmui/styles/ios/layout/dark.less')
 require('jmui/styles/ios/layout/white.less')
 require('jmui/styles/ios/theme/black.less')
